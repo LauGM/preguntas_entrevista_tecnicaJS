@@ -1,0 +1,32 @@
+header{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+footer{
+    text-align: center;
+}
+
+#ingreso{
+    display: flex;
+    align-items: center;
+}
+
+label{
+    font-size: large;
+}
+
+textarea{
+    font-size: larger;
+}
+
+h3{
+    text-align: center;
+}

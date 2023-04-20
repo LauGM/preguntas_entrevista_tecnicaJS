@@ -1,0 +1,167 @@
+[
+    {
+        "id": 1,
+        "pregunta": "Que es JavaScript ?",
+        "respuesta": "JavaScript es un lenguaje de scripting del lado del cliente y del lado del servidor que se puede insertar en páginas HTML y es entendido por los navegadores web. JavaScript también es un lenguaje de programación basado en objetos"
+    },
+    {
+        "id": 2,
+        "pregunta": "Diferencias entre Java y JavaScript ?",
+        "respuesta": "Java es un lenguaje de programación completo. Por el contrario, JavaScript es un programa codificado que se puede introducir en las páginas HTML. Estos dos idiomas no son en absoluto interdependientes y están diseñados para la intención diferente. Java es un lenguaje de programación orientado a objetos (OOPS) o estructurado como C ++ o C, mientras que JavaScript es un lenguaje de scripting del lado del cliente."
+    },
+    {
+        "id": 3,
+        "pregunta": "Cuales son los tipos de datos primitivos de JavaScript?",
+        "respuesta": "Los tipos de datos primitivos son Number, String, Boolean, Object, BigInt, Symbol, Function, Null, Undefined"
+    },
+    {
+        "id": 4,
+        "pregunta": "Cual es el uso de la funcion isNaN ?",
+        "respuesta": "isNaN es una funcion que retorna true si el argumento no es un número"
+    },
+    {
+        "id": 5,
+        "pregunta": "Qué es un negative infinity?",
+        "respuesta": "Un negative infinitive es un número en JavaScript que se puede obtener dividiendo un número negativo por cero"
+    },
+    {
+        "id": 6,
+        "pregunta": "Qué compañia desarrolló JavaScript en sus orígenes ?",
+        "respuesta": "JavaScript fue desarrollado por Netscape"
+    },
+    {
+        "id": 7,
+        "pregunta": "Cuál es la diferencia entre una variable no declarada y una variable undefined?",
+        "respuesta": "Las variables no declaradas son aquellas que no existen en un programa y no se declaran. Si el programa intenta leer el valor de una variable no declarada, se encuentra un error de tiempo de ejecución. Las variables undefined son aquellas que se declaran en el programa pero a las que no se les ha dado ningún valor. Si el programa intenta leer el valor de una variable no definida, se devuelve un valor undefined."
+    },
+    {
+        "id": 8,
+        "pregunta": "Qué son las variables globales ? Cómo son declaradas ? ",
+        "respuesta": "Las variables globales son aquellas que están disponibles a lo largo de toda la longitud del código. Las declaramos con la palabra clave let o var fuera de cualquier estructura."
+    },
+    {
+        "id": 9,
+        "pregunta": "Que es la palabra clave this en JavaScript ? ",
+        "respuesta": "La palabra clave this refiere al objeto desde donde fue llamado."
+    },
+    {
+        "id": 10,
+        "pregunta": "Qué es setTimeOut(function,delay) ? ",
+        "respuesta": "La función setTimeout(función, delay) se utiliza para iniciar un temporizador que llama a una función particular después del retraso mencionado."
+    },
+    {
+        "id": 11,
+        "pregunta": "Diferencias entre los operadores == y === ? ",
+        "respuesta": "Son ambos operadores de comparación el primero compara solo por valor y el segundo es mas completo comparando por tipo y valor."
+    },
+    {
+        "id": 12,
+        "pregunta": "De que manera podriamos cambiar un estilo o una class de un elemento desde JavaScript ? ",
+        "respuesta": "document.getElementById('myText').style.fontSize = '20px'; \n document.getElementById('myText').className = 'anyclass';"
+    },
+    {
+        "id": 13,
+        "pregunta": "Cuales son los ciclos de repeticion basicos en JavaScript ? ",
+        "respuesta": "Los ciclos en JS son: For, While y Do While"
+    },
+    {
+        "id": 14,
+        "pregunta": "Cómo podemos convertir un texto a número entero ? ",
+        "respuesta": "La funcion parseInt() es usada para convertir string a numeros de cualquier base, por ejemplo: parseInt('4F',16) convierte el numero en base 16 4F a entero decimal"
+    },
+    {
+        "id": 15,
+        "pregunta": "Cuál sería el resultado de 3+2+'7' ? ",
+        "respuesta": "El resultado de 3+2+'7' sería '57' ya que entre 3 y 2 se realiza una suma pero al seguir el caracter '7' JavaScript se ve obligado a realizar una concatenacion"
+    },
+    {
+        "id": 16,
+        "pregunta": "Qué significa null en JS ? ",
+        "respuesta": "Un valor null es utilizado para representar al valor nulo, o sea sin valor, vacío y es uno de los valores primitivos en JavaScript"
+    },
+    {
+        "id": 17,
+        "pregunta": "Qué significa undefined en JS ? ",
+        "respuesta": "Un valor undefined es un valor primitivo, que se les asigna a las variables que han sido declaradas pero no inicializadas"
+    },
+    {
+        "id": 18,
+        "pregunta": "Que función cumple el método pop() en JavaScript - Explicar ",
+        "respuesta": "El método pop() es similar al método shift(), pero la diferencia es que el método Shift elimina elementos al principio de la array, pop() lo realiza al final. A continuación, se modifica la matriz en la que se llama. Ejemplo: let cloths = ['Camisa', 'Pantalón', 'TShirt']; cloths.pop(); Ahora cloths se convierte en ['camisa', 'pantalón']"
+    },
+    {
+        "id": 19,
+        "pregunta": "Se te ocurre alguna desventaja de utilizar el método innerHTML ? ",
+        "respuesta": "Si usa innerHTML en JavaScript, la desventaja es • Si usa += el contenido anterior se reemplaza por el html anterior mas lo nuevo por lo tanto todo el contenido innerHTML se vuelve a analizar y se integra lo nuevo, es mucho más lento y costoso • El innerHTML no proporciona validación y, por lo tanto, potencialmente podemos insertar HTML roto en el documento"
+    },
+    {
+        "id": 20,
+        "pregunta": "Cuál es el uso del operador typeof ? ",
+        "respuesta": "El operador typeof retorna una cadena de texto que describe el tipo de una variable"
+    },
+    {
+        "id": 21,
+        "pregunta": "Cuáles son las palablas claves para el manejo de excepciones en JavaScript? ",
+        "respuesta": "Las palabras claves para el manejo de excepciones son try, catch, finally"
+    },
+    {
+        "id": 22,
+        "pregunta": "Cuál es el uso del método push() ? ",
+        "respuesta": "El método push() se utiliza para agregar uno o más elementos al final de una array.  Puedes pasar multiples elementos pasando multiples argumentos"
+    },
+    {
+        "id": 23,
+        "pregunta": "Cuál es el uso del método unshift() ? ",
+        "respuesta": "El método unshift() se utiliza para agregar uno o más elementos al inicio de una array.  Puedes pasar multiples elementos pasando multiples argumentos"
+    },
+    {
+        "id": 24,
+        "pregunta": "Cómo podemos realizar asignaciones a las propiedad 'nombre' del objeto const cliente={nombre:''} ? ",
+        "respuesta": "Para asignar valores a la propiedad 'nombre' tenemos dos opciones en cuanto a sintaxis \n1) cliente['nombre']='Pepe';\n2) cliente.nombre = 'Pepe';"
+    },
+    {
+        "id": 25,
+        "pregunta": "Cuál es la forma de obtener el estado de un checkbox con JS ? ",
+        "respuesta": "alert(document.getElementById('checkbox1').checked);\nSi el checkbox esta chequeado, el alert retornará true"
+    },
+    {
+        "id": 26,
+        "pregunta": "Explica window.onload() y la diferencia con el evento DOMContentLoaded? ",
+        "respuesta": "El evento load se dispara cuando todos los recursos dependientes de la página han terminado de cargar.\nEl evento DOMContentLoaded se desencadena cuando el documento HTML inicial se ha cargado y analizado completamente, sin esperar a que las hojas de estilo y las imágenes terminen de cargarse."
+    },
+    {
+        "id": 27,
+        "pregunta": "Cómo se puede modificar el contenido en una posición de un array ? ",
+        "respuesta": "array[posicion]=nuevoValor;"
+    },
+    {
+        "id": 28,
+        "pregunta": "Explique el loop for...in ? ",
+        "respuesta": "Este loop recorre las propiedades de un objeto.\n for(const prop in objeto){console.log(objeto[prop])}"
+    },
+    {
+        "id": 29,
+        "pregunta": "Describe las caracteristicas de una función anónima ",
+        "respuesta": "Una función que se declara sin ningún identificador con nombre se conoce como función anónima.\nDeclaración de función anónima\nconst anon = function() { alert('Soy anónimo'); };\nanon();"
+    },
+    {
+        "id": 30,
+        "pregunta": "JS es case sensitive ? Dar un ejemplo",
+        "respuesta": "Si, es case sensitive.  O sea no interpreta lo mismo si escribimos parseInt o Parseint"
+    },
+    {
+        "id": 31,
+        "pregunta": "Comenta los operadores logicos que te acuerdes",
+        "respuesta": "El operador 'AND' -> &&\nEl operador 'OR' -> ||\n El operador 'NOT' -> !"
+    },
+    {
+        "id": 32,
+        "pregunta": "Qué significa D.O.M. ?",
+        "respuesta": "DOM significa Document Object Model (Modelo de objetos del documento)"
+    },
+    {
+        "id": 33,
+        "pregunta": "Cuál es la relación entre ECMA Script y JavaScript ?",
+        "respuesta": "ECMA Script es el set de reglas, y guía de trabajo en JavaScript."
+    }
+]
