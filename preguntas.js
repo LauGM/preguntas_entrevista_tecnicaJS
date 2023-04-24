@@ -27,10 +27,10 @@ const jugar = (usuario) => {
             <h3>Hola ${usuario} 🖐️ Preparate para comenzar en ${contador} <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
             <span class="sr-only">Loading...</span></h3>
         `;
-        if(contador == 0) {
+        if (contador == 0) {
             clearInterval(intervalo);
             mostrarPregunta();
-        }else{
+        } else {
             contador--;
         }
     }, 1000);
@@ -51,54 +51,69 @@ comenzarBtn.onclick = () => {
     }
 }
 
-const mostrarPregunta=()=>{
+const mostrarPregunta = () => {
     let numero = 0;
     articleJuego.innerHTML = '';
     articleJuego.innerHTML = `
         <h3>Pregunta número ${orden[numero]}</h3>
-        <textarea rows='7' cols='50' readonly>${preguntas[orden[numero]-1].pregunta}</textarea>
+        <textarea rows='7' cols='50' readonly>${preguntas[orden[numero] - 1].pregunta}</textarea>
     `;
     articleBotones.innerHTML = `
         <button id='respuesta'>Ver Respuesta</button>
         <button id='siguiente'>Siguiente</button>
     `;
     document.getElementById('siguiente').onclick = () => {
-        numero++;
-        articleJuego.innerHTML = '';
-        articleJuego.innerHTML = `
+        if (numero < orden.length - 1) {
+            numero++;
+            articleJuego.innerHTML = '';
+            articleJuego.innerHTML = `
             <h3>Pregunta número ${orden[numero]}</h3>
-            <textarea rows='4' cols='50' readonly>${preguntas[orden[numero]-1].pregunta}</textarea>
+            <textarea rows='6' cols='50' readonly>${preguntas[orden[numero] - 1].pregunta}</textarea>
             <p>${correctas} correctas / ${numero} totales</p>
         `;
+        document.getElementById('respuesta').removeAttribute('disabled');
+        } else {
+            articleJuego.innerHTML = '';
+            articleJuego.innerHTML = `
+                <h3>No hay más preguntas - Como te fué ?</h3>
+            `;
+            articleBotones.innerHTML = `
+            <button id='bien' onclick='confetti()')>Bien 💪</button>
+            <button id='maso' onclick='Swal.fire("A seguir intentando 💫")'>Maso 😅</button>
+        `;
+        }
+
     }
     document.getElementById('respuesta').onclick = () => {
-        articleJuego.innerHTML+=`
-            <textarea rows='7' cols='50' readonly>${preguntas[orden[numero]-1].respuesta}</textarea>
+        articleJuego.innerHTML += `
+            <textarea rows='7' cols='50' readonly>${preguntas[orden[numero] - 1].respuesta}</textarea>
         `;
+        document.getElementById('respuesta').setAttribute('disabled',true);
         dispararAlert();
     }
 }
 
-const dispararAlert=()=>{
-    Swal.fire({
-        position: 'top-end',
-        background: '#7f8de1',
-        width:'23rem',
-        padding:'5px',
-        title: 'Respondiste bien ?',
-        icon: 'question',
-        showCancelButton: true,
-        focusConfirm: true,
-        confirmButtonText:
-          '<i class="fa fa-thumbs-up"></i> Si!',
-        confirmButtonAriaLabel: 'Thumbs up, great!',
-        cancelButtonText:
-          '<i class="fa fa-thumbs-down"></i> No',
-        cancelButtonAriaLabel: 'Thumbs down'
-      }).then((result) => {
-        if (result.isConfirmed) {
-          correctas++;
-        }
-      });
-
+const dispararAlert = () => {
+    setTimeout(() => {
+        Swal.fire({
+            position: 'top-end',
+            background: '#7f8de1',
+            width: '23rem',
+            padding: '5px',
+            title: 'Respondiste bien ?',
+            icon: 'question',
+            showCancelButton: true,
+            focusConfirm: true,
+            confirmButtonText:
+                '<i class="fa fa-thumbs-up"></i> Si!',
+            confirmButtonAriaLabel: 'Thumbs up, great!',
+            cancelButtonText:
+                '<i class="fa fa-thumbs-down"></i> No',
+            cancelButtonAriaLabel: 'Thumbs down'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                correctas++;
+            }
+        });
+    }, 3000);
 }

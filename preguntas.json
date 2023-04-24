@@ -2,7 +2,7 @@
     {
         "id": 1,
         "pregunta": "Que es JavaScript ?",
-        "respuesta": "JavaScript es un lenguaje de scripting del lado del cliente y del lado del servidor que se puede insertar en páginas HTML y es entendido por los navegadores web. JavaScript también es un lenguaje de programación basado en objetos"
+        "respuesta": "JavaScript es un lenguaje de scripting del lado del cliente y del lado del servidor que se puede insertar en páginas HTML y es entendido por los navegadores web. JavaScript también es un lenguaje de programación multiparadigma"
     },
     {
         "id": 2,
@@ -163,5 +163,30 @@
         "id": 33,
         "pregunta": "Cuál es la relación entre ECMA Script y JavaScript ?",
         "respuesta": "ECMA Script es el set de reglas, y guía de trabajo en JavaScript."
+    },
+    {
+        "id": 34,
+        "pregunta": "function saludo(){\n  const mensaje='Hola';\n  console.log(mensaje);\n}\nconsole.log(mensaje);\n\nQué arroja ?",
+        "respuesta": "Arroja ReferenceError: mensaje is not defined.  Basicamente por el scope en el que se define la constante mensaje"
+    },
+    {
+        "id": 35,
+        "pregunta": "function suma(){\n  const a=10;\n  return a + 2;\n}\nconst a = 20;\nconsole.log(sumar());\nQué retorna ?",
+        "respuesta": "Retorna 12 porque prevalece su scope"
+    },
+    {
+        "id": 36,
+        "pregunta": "for(var i=1;i<4;i++){\n  setTimeout{()=>console.log(i),2000);\n}\n\nQué imprime y porqué ?",
+        "respuesta": "Imprime 3 veces el número 3, porque var tiene un ámbito de función y solo un enlace compartido para todas las iteraciones de bucle, es decir, la i en cada devolución de llamada setTimeout significa la misma variable que finalmente es igual a 3 después de que finaliza la iteración del bucle."
+    },
+    {
+        "id": 37,
+        "pregunta": "for(let i=1;i<4;i++){\n  setTimeout{()=>console.log(i),2000);\n}\n\nQué imprime y porqué ?",
+        "respuesta": "Imprime 1 2 3, porque con let tu tienes un ámbito de bloque y cuando se usa en el bucle for se obtiene un nuevo enlace para cada iteración, es decir, la i en cada devolución de llamada setTimeout significa una variable diferente, cada una de las cuales tiene un valor diferente: la primera es 1, la siguiente es 2, etc."
+    },
+    {
+        "id": 38,
+        "pregunta": "Que es el hoisting ?",
+        "respuesta": "Una estricta definición de hoisting sugiere que las declaraciones de variables y funciones son físicamente movidas al comienzo del código, pero esto no es lo que ocurre en realidad. Lo que sucede es que las declaraciones de variables y funciones son asignadas en memoria durante la fase de compilación, pero quedan exactamente en dónde las has escrito en el código."
     }
 ]
