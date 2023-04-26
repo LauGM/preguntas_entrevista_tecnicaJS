@@ -56,7 +56,7 @@ const mostrarPregunta = () => {
     articleJuego.innerHTML = '';
     articleJuego.innerHTML = `
         <h3>Pregunta número ${orden[numero]}</h3>
-        <textarea rows='7' cols='50' readonly>${preguntas[orden[numero] - 1].pregunta}</textarea>
+        <textarea rows='8' cols='50' readonly>${preguntas[orden[numero] - 1].pregunta}</textarea>
     `;
     articleBotones.innerHTML = `
         <button id='respuesta'>Ver Respuesta</button>
@@ -68,7 +68,7 @@ const mostrarPregunta = () => {
             articleJuego.innerHTML = '';
             articleJuego.innerHTML = `
             <h3>Pregunta número ${orden[numero]}</h3>
-            <textarea rows='6' cols='50' readonly>${preguntas[orden[numero] - 1].pregunta}</textarea>
+            <textarea rows='8' cols='50' readonly>${preguntas[orden[numero] - 1].pregunta}</textarea>
             <p>${correctas} correctas / ${numero} totales</p>
         `;
         document.getElementById('respuesta').removeAttribute('disabled');

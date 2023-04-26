@@ -36,8 +36,8 @@
     },
     {
         "id": 8,
-        "pregunta": "Qué son las variables globales ? Cómo son declaradas ? ",
-        "respuesta": "Las variables globales son aquellas que están disponibles a lo largo de toda la longitud del código. Las declaramos con la palabra clave let o var fuera de cualquier estructura."
+        "pregunta": "Qué son las variables globales ? Cómo son declaradas a partir de ES6 ? ",
+        "respuesta": "Las variables globales son aquellas que están disponibles a lo largo de toda la longitud del código. Desde ES6 las declaramos con la palabra clave let fuera de cualquier estructura."
     },
     {
         "id": 9,
@@ -87,7 +87,7 @@
     {
         "id": 18,
         "pregunta": "Que función cumple el método pop() en JavaScript - Explicar ",
-        "respuesta": "El método pop() es similar al método shift(), pero la diferencia es que el método Shift elimina elementos al principio de la array, pop() lo realiza al final. A continuación, se modifica la matriz en la que se llama. Ejemplo: let cloths = ['Camisa', 'Pantalón', 'TShirt']; cloths.pop(); Ahora cloths se convierte en ['camisa', 'pantalón']"
+        "respuesta": "El método pop() es similar al método shift(), pero la diferencia es que el método shift() elimina elementos al principio de la array, pop() lo realiza al final. A continuación, se modifica el array.\nEjemplo: let cloths = ['Camisa', 'Pantalón', 'TShirt']; cloths.pop(); Ahora cloths se convierte en ['Camisa', 'Pantalón']"
     },
     {
         "id": 19,
@@ -176,8 +176,8 @@
     },
     {
         "id": 36,
-        "pregunta": "for(var i=1;i<4;i++){\n  setTimeout{()=>console.log(i),2000);\n}\n\nQué imprime y porqué ?",
-        "respuesta": "Imprime 3 veces el número 3, porque var tiene un ámbito de función y solo un enlace compartido para todas las iteraciones de bucle, es decir, la i en cada devolución de llamada setTimeout significa la misma variable que finalmente es igual a 3 después de que finaliza la iteración del bucle."
+        "pregunta": "for(var i=1;i<3;i++){\n  setTimeout{()=>console.log(i),2000);\n}\n\nQué imprime y porqué ?",
+        "respuesta": "Imprime 3 veces el número 3, porque var tiene un ámbito global y solo un enlace compartido para todas las iteraciones de bucle, es decir, la i en cada devolución de llamada setTimeout significa la misma variable que finalmente es igual a 3 después de que finaliza las iteraciones del bucle."
     },
     {
         "id": 37,
