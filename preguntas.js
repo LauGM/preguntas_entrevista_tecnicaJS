@@ -55,8 +55,10 @@ const mostrarPregunta = () => {
     let numero = 0;
     articleJuego.innerHTML = '';
     articleJuego.innerHTML = `
-        <h3>Pregunta número ${orden[numero]}</h3>
-        <textarea rows='8' cols='50' readonly>${preguntas[orden[numero] - 1].pregunta}</textarea>
+        <div>
+            <h3>Pregunta número ${orden[numero]}</h3>
+            <textarea rows='10' readonly>${preguntas[orden[numero] - 1].pregunta}</textarea>
+        </div>
     `;
     articleBotones.innerHTML = `
         <button id='respuesta'>Ver Respuesta</button>
@@ -67,11 +69,13 @@ const mostrarPregunta = () => {
             numero++;
             articleJuego.innerHTML = '';
             articleJuego.innerHTML = `
-            <h3>Pregunta número ${orden[numero]}</h3>
-            <textarea rows='8' cols='50' readonly>${preguntas[orden[numero] - 1].pregunta}</textarea>
+            <div>
+                <h3>Pregunta número ${orden[numero]}</h3>
+                <textarea rows='10' readonly>${preguntas[orden[numero] - 1].pregunta}</textarea>
+            </div>
             <p>${correctas} correctas / ${numero} totales</p>
         `;
-        document.getElementById('respuesta').removeAttribute('disabled');
+            document.getElementById('respuesta').removeAttribute('disabled');
         } else {
             articleJuego.innerHTML = '';
             articleJuego.innerHTML = `
@@ -86,9 +90,11 @@ const mostrarPregunta = () => {
     }
     document.getElementById('respuesta').onclick = () => {
         articleJuego.innerHTML += `
-            <textarea rows='7' cols='50' readonly>${preguntas[orden[numero] - 1].respuesta}</textarea>
+        <div>
+            <textarea rows='10' readonly>${preguntas[orden[numero] - 1].respuesta}</textarea>
+        </div>
         `;
-        document.getElementById('respuesta').setAttribute('disabled',true);
+        document.getElementById('respuesta').setAttribute('disabled', true);
         dispararAlert();
     }
 }

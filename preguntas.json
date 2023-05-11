@@ -57,7 +57,7 @@
     {
         "id": 12,
         "pregunta": "De que manera podriamos cambiar un estilo o una class de un elemento desde JavaScript ? ",
-        "respuesta": "document.getElementById('myText').style.fontSize = '20px'; \n document.getElementById('myText').className = 'anyclass';"
+        "respuesta": "document.getElementById('myText').style.fontSize = '20px'; \n\ndocument.getElementById('myText').className = 'anyclass';"
     },
     {
         "id": 13,
@@ -152,7 +152,7 @@
     {
         "id": 31,
         "pregunta": "Comenta los operadores logicos que te acuerdes",
-        "respuesta": "El operador 'AND' -> &&\nEl operador 'OR' -> ||\n El operador 'NOT' -> !"
+        "respuesta": "El operador 'AND' -> &&\nEl operador 'OR' -> ||\nEl operador 'NOT' -> !"
     },
     {
         "id": 32,

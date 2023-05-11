@@ -2,31 +2,72 @@ header{
     display: flex;
     justify-content: center;
     flex-direction: row;
+    text-align: center;
 }
 
 main{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-direction: row;
+    align-items: center;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    width:80%;
+    justify-content: center;
 }
 
 footer{
     text-align: center;
 }
 
-#ingreso{
-    display: flex;
-    align-items: center;
-}
-
 label{
     font-size: large;
+}
+article {
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+}
+
+div {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width:100%;
+    justify-content: center;
 }
 
 textarea{
     font-size: larger;
+    flex-basis: 60%;
+    height:fit-content;
 }
 
 h3{
     text-align: center;
+}
+
+@media only screen and (max-device-width: 480px) and (orientation: portrait) {
+    main {
+        display:flex;
+        flex-wrap: wrap;
+    }
+    div {
+        display:flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        flex-basis:100%;
+    }
+    article {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    textarea {
+        font-size:medium;
+        flex-basis: 80%;
+        height:fit-content;
+    }
 }
