@@ -17,10 +17,16 @@ section{
     flex-direction: column;
     width:80%;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+
 }
 
 footer{
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 label{
@@ -30,6 +36,7 @@ article {
     display: flex;
     flex-wrap: wrap;
     width:100%;
+    justify-content: center;
 }
 
 div {
